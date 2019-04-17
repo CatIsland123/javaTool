@@ -2,6 +2,9 @@ class myException extends Exception{
 	public myException(String message) {
 	       super(message);
 	}
+	public String getMessage(){
+	return String.format("%s", Thread.currentThread().getName()+"For input String:"+super.getMessage());
+	}
 }
 class myTool{
 	public static int parsetInt(String str) throws myException {
